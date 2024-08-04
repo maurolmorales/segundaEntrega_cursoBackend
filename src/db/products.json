@@ -1,0 +1,72 @@
+[
+  {
+    "id": "tqvbs52h1yborfmdjpiw",
+    "title": "Laptop HP",
+    "description": "Laptop HP de alta gama con procesador Intel i7.",
+    "code": "HP1234",
+    "price": 1200,
+    "status": true,
+    "stock": 15,
+    "category": "Electrónica",
+    "thumbnails": [
+      "images/laptop_hp_1.jpg",
+      "images/laptop_hp_2.jpg"
+    ]
+  },
+  {
+    "title": "Cámara Canon",
+    "description": "Cámara réflex Canon EOS 90D con lente 18-135mm.",
+    "code": "CANON90D",
+    "price": 1500,
+    "status": true,
+    "stock": 10,
+    "category": "Fotografía",
+    "thumbnails": [
+      "images/canon_90d_1.jpg",
+      "images/canon_90d_2.jpg"
+    ],
+    "id": "0hdbv62w73qa7ubf6trl"
+  },
+  {
+    "title": "Televisor LG",
+    "description": "Televisor LG 4K de 55 pulgadas con HDR.",
+    "code": "LGTV55",
+    "price": 700,
+    "status": true,
+    "stock": 20,
+    "category": "Electrodomésticos",
+    "thumbnails": [
+      "images/lg_tv_55_1.jpg",
+      "images/lg_tv_55_2.jpg"
+    ],
+    "id": "z6mx2iixfs3hvx1msy55"
+  },
+  {
+    "id": "6c6g6vasdv8cpps35hg0",
+    "title": "Laptop HP",
+    "description": "Laptop HP de alta gama con procesador Intel i7.",
+    "code": "HP1234",
+    "price": 1200,
+    "status": true,
+    "stock": 15,
+    "category": "Electrónica",
+    "thumbnails": [
+      "images/laptop_hp_1.jpg",
+      "images/laptop_hp_2.jpg"
+    ]
+  },
+  {
+    "id": "6cye4tvmf0o8gpr4jtse",
+    "title": "ApplePoint HP",
+    "description": "Laptop HP de alta gama con procesador Intel i7.",
+    "code": "HP1234",
+    "price": 1200,
+    "status": true,
+    "stock": 15,
+    "category": "Electrónica",
+    "thumbnails": [
+      "images/laptop_hp_1.jpg",
+      "images/laptop_hp_2.jpg"
+    ]
+  }
+]
