@@ -1,0 +1,20 @@
+<nav>
+  <a href="/">Ir a Home</a>
+  <a href="realTimeProducts">Ir a realTimeProducts</a>
+  <a href="products">Ir a Products</a>
+</nav>
+
+<div class="container">
+  {{#each products}}
+    <div>
+      <p><strong>ID: </strong> {{this.id}}</p>
+      <p><strong>Name: </strong> {{this.title}}</p>
+      <p><strong>Description: </strong> {{this.description}}</p>
+      <p><strong>Code: </strong> {{this.code}}</p>
+      <p><strong>Price: </strong>:{{this.price}}</p>
+      <p><strong>Status: </strong>:{{this.status}}</p>
+      <p><strong>Stock: </strong>:{{this.stock}}</p>
+      <p><strong>Category: </strong>:{{this.category}}</p>
+    </div>
+  {{/each}}
+</div>

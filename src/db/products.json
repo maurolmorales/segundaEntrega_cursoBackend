@@ -1,19 +1,5 @@
 [
   {
-    "id": "tqvbs52h1yborfmdjpiw",
-    "title": "Laptop HP",
-    "description": "Laptop HP de alta gama con procesador Intel i7.",
-    "code": "HP1234",
-    "price": 1200,
-    "status": true,
-    "stock": 15,
-    "category": "Electrónica",
-    "thumbnails": [
-      "images/laptop_hp_1.jpg",
-      "images/laptop_hp_2.jpg"
-    ]
-  },
-  {
     "title": "Cámara Canon",
     "description": "Cámara réflex Canon EOS 90D con lente 18-135mm.",
     "code": "CANON90D",
@@ -68,5 +54,6 @@
       "images/laptop_hp_1.jpg",
       "images/laptop_hp_2.jpg"
     ]
-  }
+  },
+  "{\"title\":\"qweqwea\",\"description\":\"sdasd\",\"code\":\"sadasd\",\"price\":\"2323\",\"stock\":\"1212\",\"category\":\"asdasdsa\"}"
 ]

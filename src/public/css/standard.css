@@ -1,0 +1,369 @@
+/* ------------------------------    Parameters      ---------------------------------- */
+:root {
+  --negro: #393939;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+/* Las adaptamos al modo oscuro */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+} */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+/* ------------------------------    Formating Group      ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a,strong,blockquote,i,b,u,em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* ------------------------------    Basic      --------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  background-color: darkgray;
+
+}
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: bold;
+}
+h2{font-size: 1.5rem;}
+/* h3{} */
+/* h4{} */
+/* h5{} */
+/* h6{} */
+/* p{} */
+/* br{} */
+/* hr{}  */
+
+/* ------------------------------    Formating      ----------------------------------- */
+/* abbr{} */
+/* address{} */
+/* b{} */
+/* bdi{} */
+/* bdo{} */
+/* blockquote{} */
+/* cite{} */
+/* code{} */
+/* del{} */
+/* dfn{} */
+/* em{} */
+/* i{} */
+/* ins{} */
+/* kbd{} */
+/* mark{} */
+/* meter{} */
+/* pre{} */
+/* progress{} */
+/* q{} */
+/* rp{} */
+/* rt{} */
+/* ruby{} */
+/* s{} */
+/* samp{} */
+/* small{} */
+strong{
+  font-weight: bold;
+}
+/* sub{} */
+/* sup{} */
+/* template{} */
+/* time{} */
+/* u{} */
+/* var{} */
+/* wbr{} */
+
+/* ------------------------------    Forms and Imput      ----------------------------- */
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form div{
+  display: inherit;
+  flex-direction: column;
+}
+
+input[type=text], input[type=number]{
+  background-color: bisque;
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+/* textarea{} */
+button, input[type=submit]{
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: silver;
+  box-shadow: 1px 1px 1px black;
+}
+
+
+/* select{} */
+/* optgroup{} */
+/* option{} */
+/* label{} */
+/* fieldset{} */
+/* legend{} */
+/* datalist{} */
+/* output{} */
+
+/* ------------------------------    Frames      -------------------------------------- */
+/* iframe{} */
+
+/* ------------------------------    Images      -------------------------------------- */
+/* img{} */
+/* map{} */
+/* area{} */
+/* canvas{} */
+/* figcaption{} */
+/* figure{} */
+/* picture{} */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+p svg {
+  display: inline;
+  width: initial;
+}
+
+/* ------------------------------    Audio and Video      ----------------------------- */
+/* audio{} */
+/* source{} */
+/* track{} */
+/* video{} */
+
+/* ------------------------------    Links      --------------------------------------- */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+p a {
+  display: inline;
+}
+/* link{} */
+nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: aqua;
+}
+
+/* ------------------------------    List      ---------------------------------------- */
+/* ul{} */
+/* ol{} */
+li {
+  list-style-type: none;
+}
+/* dl{} */
+/* dt{} */
+/* dd{} */
+
+/* ------------------------------    Table      --------------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* caption{} */
+/* th{} */
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* thead{} */
+/* tbody{} */
+/* tfoot{} */
+/* col{} */
+/* colgroup{} */
+
+/* ------------------------------    Styles and Semantics      ------------------------ */
+/* div{} */
+/* span{} */
+header{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: antiquewhite;
+}
+/* footer{} */
+/* main{} */
+/* section{} */
+/* article{} */
+/* aside{} */
+/* details{} */
+/* dialog{} */
+/* summary{} */
+/* data{} */
+
+/* ------------------------------    Programming      --------------------------------- */
+
+/* script{} */
+/* noscript{} */
+/* embed{} */
+/* object{} */
+/* param{} */
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: teal;
+}
+
+.container div{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.8rem;
+  border: 1px solid red;
+  color: aliceblue;
+}
+
+.twoColumns{
+  width: 100%;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 1rem;
+  gap: 2rem;
+  background-color: cornflowerblue;
+}
+
+.form p {
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form div{
+  padding: 1rem;
+  background-color: rgb(128, 126, 126);
+}
+
+.buttonEnviar{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

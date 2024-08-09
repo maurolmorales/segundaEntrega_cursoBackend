@@ -1,6 +1,6 @@
-const fileUrlToPath = require("url").fileURLToPath;
-const dirname = require("path").dirname;
-const __filename = fileUrlToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const path = require("path");
+const { fileURLToPath } = require("url");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-module.exports == app;
+module.exports = __dirname;

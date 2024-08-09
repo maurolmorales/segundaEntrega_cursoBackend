@@ -1,0 +1,14 @@
+<script src="/js/partial.js"></script>
+{{#each products }}
+  <div>
+    <p><strong>ID: </strong> {{this.id}}</p>
+    <p><strong>Name: </strong> {{this.title}}</p>
+    <p><strong>Description: </strong> {{this.description}}</p>
+    <p><strong>Code: </strong> {{this.code}}</p>
+    <p><strong>Price: </strong>:{{this.price}}</p>
+    <p><strong>Status: </strong>:{{this.status}}</p>
+    <p><strong>Stock: </strong>:{{this.stock}}</p>
+    <p><strong>Category: </strong>:{{this.category}}</p>
+    <button onclick="deleteProductSocket('{{this.id}}')" `>Eliminar</button>
+  </div>
+{{/each}}
