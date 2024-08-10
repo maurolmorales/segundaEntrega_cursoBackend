@@ -4,7 +4,6 @@ const routerView = express.Router();
 
 routerView.get("/products", async (req, res) => {
   const products = await getAllProducts();
-  // console.log(products)
   res.render("products", { title: "Lista de Productos", products });
 });
 

@@ -48,7 +48,7 @@ const updateOneProduct = async (pid, p_product) => {
   const dataReceived = await readFiles(pathProducts);
   const dataFinded = dataReceived.find((product) => { return product.id === pid });
 
-  if (!dataFinded) { return null }
+  if (!dataFinded) { return null } 
 
   dataFinded.title = p_product.title ?? dataFinded.title;
   dataFinded.description = p_product.description ?? dataFinded.description;

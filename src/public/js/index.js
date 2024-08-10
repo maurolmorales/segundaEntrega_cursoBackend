@@ -1,13 +1,28 @@
 const socket = io();
 
+// para guardar un producto ///////////////////////////////////////////////////////////////// 
 document.querySelector("#formNewProduct").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
+
+  // para verificar si todos los campos no están vacíos.   
+  let listaDeErrores = [];
+  for (const k in data) {
+    if(data[k]==null || data[k] === undefined || data[k]== ''){ listaDeErrores.push(k) }
+  }
+
+  if(listaDeErrores.length > 0){  
+    alert(`Los campos "${listaDeErrores.join(', ')}" son obligatorios.`);
+    return;
+  }
+  
   socket.emit("nuevoProducto", data);
   e.target.reset();
+  return;
 });
 
 
+// para mostrar por socket.io todos los productos: ////////////////////////////////////////////
 const contenedor = document.querySelector("#productContainer");
 socket.on("allProducts", (socketProducts) => {
   contenedor.innerHTML =''
@@ -28,10 +43,9 @@ socket.on("allProducts", (socketProducts) => {
   });
 });
 
-/* ---------------------------------------------------- */
 
+// Para elimiar el prodcuto indicado ///////////////////////////////////////////////////
 const deleteProductSocket = (prodId) => {
-   console.log("eliminar", prodId);
    socket.emit("deleteProduct", prodId);
 };
 

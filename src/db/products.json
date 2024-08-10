@@ -20,17 +20,23 @@
     "status": true
   },
   {
-    "id": "d85zsbprejet2ge01u9y",
-    "title": "Laptop Nuevo HP",
-    "description": "Laptop HP de alta gama con procesador Intel i7.",
-    "code": "HP1234",
-    "price": 1200,
-    "status": true,
-    "stock": 15,
-    "category": "Electrónica",
-    "thumbnails": [
-      "images/laptop_hp_1.jpg",
-      "images/laptop_hp_2.jpg"
-    ]
+    "title": "Televisor LG",
+    "description": "Televisor LG 4K de 55 pulgadas con HDR.",
+    "code": "LGTV55",
+    "price": "700",
+    "stock": "20",
+    "category": "Electrodomésticos",
+    "id": "54ltxlpqibs1o6lu0vcx",
+    "status": true
+  },
+  {
+    "title": "Cámara Canon",
+    "description": "Cámara réflex Canon EOS 90D con lente 18-135mm.",
+    "code": "CANON90D",
+    "price": "1500",
+    "stock": "10",
+    "category": "Fotografía",
+    "id": "sqqtpzb021ely64xu5ba",
+    "status": true
   }
 ]

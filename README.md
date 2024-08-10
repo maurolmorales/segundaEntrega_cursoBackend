@@ -1,5 +1,9 @@
-# Node.js eCommerce API
+# Curso de Backend - Segunda Entrega
 
-Este proyecto es una API basada en Node.js y Express para gestionar productos y carritos de compra. La persistencia de datos se realiza utilizando el sistema de archivos, almacenando la información en archivos JSON.
+## Descripción General
+Este proyecto es la segunda entrega para el curso de Backend con Node.js. La aplicación es una extensión del trabajo anterior, donde se incorporaron vistas utilizando Handlebars y funcionalidades en tiempo real usando Socket.io.
 
-
+## Rutas
+- GET /products: Obtiene y muestra todos los productos.
+- GET /realtimeproducts: Renderiza la página para las actualizaciones de productos en tiempo real.
+- Rutas API: Todas las rutas API están prefijadas con /api.
