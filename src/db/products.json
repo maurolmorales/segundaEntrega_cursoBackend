@@ -1,35 +1,27 @@
 [
   {
-    "title": "Cámara Canon",
-    "description": "Cámara réflex Canon EOS 90D con lente 18-135mm.",
-    "code": "CANON90D",
-    "price": 1500,
-    "status": true,
-    "stock": 10,
-    "category": "Fotografía",
-    "thumbnails": [
-      "images/canon_90d_1.jpg",
-      "images/canon_90d_2.jpg"
-    ],
-    "id": "0hdbv62w73qa7ubf6trl"
+    "title": "Smartphone Samsung",
+    "description": "Smartphone Samsung Galaxy S21 con 128GB de almacenamiento",
+    "code": "SSG21",
+    "price": "800",
+    "stock": "30",
+    "category": "Electrónica",
+    "id": "373kqiivf8jjz4be6var",
+    "status": true
   },
   {
-    "title": "Televisor LG",
-    "description": "Televisor LG 4K de 55 pulgadas con HDR.",
-    "code": "LGTV55",
-    "price": 700,
-    "status": true,
-    "stock": 20,
-    "category": "Electrodomésticos",
-    "thumbnails": [
-      "images/lg_tv_55_1.jpg",
-      "images/lg_tv_55_2.jpg"
-    ],
-    "id": "z6mx2iixfs3hvx1msy55"
+    "title": "Auriculares Sony",
+    "description": "Auriculares inalámbricos Sony con cancelación de ruido.",
+    "code": "SONYWH1000XM4",
+    "price": "300",
+    "stock": "25",
+    "category": "Accesorios",
+    "id": "hm6dy6heskhca0n3jsur",
+    "status": true
   },
   {
-    "id": "6c6g6vasdv8cpps35hg0",
-    "title": "Laptop HP",
+    "id": "d85zsbprejet2ge01u9y",
+    "title": "Laptop Nuevo HP",
     "description": "Laptop HP de alta gama con procesador Intel i7.",
     "code": "HP1234",
     "price": 1200,
@@ -40,20 +32,5 @@
       "images/laptop_hp_1.jpg",
       "images/laptop_hp_2.jpg"
     ]
-  },
-  {
-    "id": "6cye4tvmf0o8gpr4jtse",
-    "title": "ApplePoint HP",
-    "description": "Laptop HP de alta gama con procesador Intel i7.",
-    "code": "HP1234",
-    "price": 1200,
-    "status": true,
-    "stock": 15,
-    "category": "Electrónica",
-    "thumbnails": [
-      "images/laptop_hp_1.jpg",
-      "images/laptop_hp_2.jpg"
-    ]
-  },
-  "{\"title\":\"qweqwea\",\"description\":\"sdasd\",\"code\":\"sadasd\",\"price\":\"2323\",\"stock\":\"1212\",\"category\":\"asdasdsa\"}"
+  }
 ]

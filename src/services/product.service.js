@@ -45,73 +45,33 @@ const getOneProduct = async (pid) => {
 };
 
 const updateOneProduct = async (pid, p_product) => {
-  const dataReceived = await readFiles(pathProducts);  
-  const dataFinded = dataReceived.find((product) => {
-    return product.id === pid;
-  });
-  const dataFiltred = dataReceived.filter((product) => {
-    return product.id !== pid;
-  });
+  const dataReceived = await readFiles(pathProducts);
+  const dataFinded = dataReceived.find((product) => { return product.id === pid });
 
-  if (
-    dataFinded.title !== null &&
-    dataFinded.title !== undefined &&
-    dataFinded.title !== dataReceived.title
-  ) {
-    return (dataFinded.title = p_product.title);
-  }
-  if (
-    dataFinded.description !== null &&
-    dataFinded.description !== undefined &&
-    dataFinded.description !== dataReceived.description
-  ) {
-    return (dataFinded.description = p_product.description);
-  }
-  if (
-    dataFinded.code !== null &&
-    dataFinded.code !== undefined &&
-    dataFinded.code !== dataReceived.code
-  ) {
-    return (dataFinded.code = p_product.code);
-  }
-  if (
-    dataFinded.price !== null &&
-    dataFinded.price !== undefined &&
-    dataFinded.price !== dataReceived.price
-  ) {
-    return (dataFinded.price = p_product.price);
-  }
-  if (
-    dataFinded.stock !== null &&
-    dataFinded.stock !== undefined &&
-    dataFinded.stock !== dataReceived.stock
-  ) {
-    return (dataFinded.stock = p_product.stock);
-  }
-  if (
-    dataFinded.status !== null &&
-    dataFinded.status !== undefined &&
-    dataFinded.status !== dataReceived.status
-  ) {
-    return (dataFinded.status = p_product.status);
-  }
-  if (
-    dataFinded.category !== null &&
-    dataFinded.category !== undefined &&
-    dataFinded.category !== dataReceived.category
-  ) {
-    return (dataFinded.category = p_product.category);
-  }
+  if (!dataFinded) { return null }
 
+  dataFinded.title = p_product.title ?? dataFinded.title;
+  dataFinded.description = p_product.description ?? dataFinded.description;
+  dataFinded.code = p_product.code ?? dataFinded.code;
+  dataFinded.price = p_product.price ?? dataFinded.price;
+  dataFinded.stock = p_product.stock ?? dataFinded.stock;
+  dataFinded.status = p_product.status ?? dataFinded.status;
+  dataFinded.category = p_product.category ?? dataFinded.category;
+
+  const dataFiltred = dataReceived.filter((product) => product.id !== pid);
   dataFiltred.push(dataFinded);
-  const dataFinal = await writeFiles(pathProducts, dataFiltred);
-  return dataFinal;
+  await writeFiles(pathProducts, dataFiltred);
+  return dataFinded;
 };
 
 const deleteOneProduct = async (pid) => {
   const dataReceived = await readFiles(pathProducts);
-  const dataFounded = dataReceived.find((product) => { return product.id == pid });
-  const dataFiltred = dataReceived.filter((product) => { return product.id !== pid });
+  const dataFounded = dataReceived.find((product) => {
+    return product.id == pid;
+  });
+  const dataFiltred = dataReceived.filter((product) => {
+    return product.id !== pid;
+  });
 
   if (dataFounded) {
     await writeFiles(pathProducts, dataFiltred);

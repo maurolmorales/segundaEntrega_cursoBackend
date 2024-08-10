@@ -1,10 +1,10 @@
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
-const routes = require("./routes/index.js");
-const routerView = require("./routes/view.router.js");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const routes = require("./routes/index.js");
+const routerView = require("./routes/view.router.js");
 const { getAllProducts, saveProduct, deleteOneProduct } = require("./services/product.service.js");
 
 const app = express();
@@ -27,21 +27,15 @@ io.on("connection", async(socket) => {
   const socketProducts = await getAllProducts();
   socket.emit("allProducts", socketProducts);
 
-  socket.on("nuevoProducto", (data) => {
-    saveProduct(data)
-    // console.log(data);
-  });
+  socket.on("nuevoProducto", (data) => { saveProduct(data) });
 
   socket.on("deleteProduct", async(data)=>{
     await deleteOneProduct(data);
   })
 
-  // socket.on("disconnect", () => {
-  //   console.log("Un cliente se ha desconectado");
-  // });
 });
 
 app.use("/api", routes);
 app.use("/", routerView)
 
-module.exports = {app, httpServer}
+module.exports = {httpServer}

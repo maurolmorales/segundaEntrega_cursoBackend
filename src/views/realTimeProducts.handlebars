@@ -1,4 +1,3 @@
-
 <nav>
   <a href="/">Ir a Home</a>
   <a href="realTimeProducts">Ir a realTimeProducts</a>
@@ -7,47 +6,39 @@
 
 <section class="twoColumns">
   <div class="form" id="newProductForm">
-    <p>Crear Producto</p>
-    <form id="formNewProduct"
-    {{!-- action="/api/products/" method="post" --}}
-    >
+    <h2>Crear Producto</h2>
+    <form id="formNewProduct">
       <div>
         <label for="title">Title: </label>
-        <input type="text" name="title" id="title" />
+        <input type="text" name="title" id="title" placeholder="Laptop HP" />
       </div>
       <div>
         <label for="description">Description: </label>
-        <input type="text" name="description" id="description" />
+        <input type="text" name="description" id="description" placeholder="Laptop de alta gama..." />
       </div>
       <div>
         <label for="code">Code: </label>
-        <input type="text" name="code" id="code" />
+        <input type="text" name="code" id="code" placeholder="HP1234" />
       </div>
       <div>
         <label for="price">Price: </label>
         <input type="number" step="0.01" name="price" id="price" />
       </div>
-      {{!-- <div>
-        <label for="status">Status: </label>
-        <input type="text" name="status" id="status" />
-      </div> --}}
       <div>
         <label for="stock">Stock: </label>
         <input type="number" name="stock" id="stock" />
       </div>
       <div>
         <label for="category">Category: </label>
-        <input type="text" name="category" id="category" />
+        <input type="text" name="category" id="category" placeholder="Electrónica" />
       </div>
       <div class="buttonEnviar">
-        <input type="submit" value="Enviar">
-        {{!-- <button onclick="saveProductSocket">Enviar</button> --}}
-        {{!-- <button id="EnviarForm">enviar</button> --}}
+        <input type="submit" value="Enviar" />
       </div>
     </form>
   </div>
   <div class="container" id="productContainer">
-   {{> socketProduct }}
+
   </div>
 </section>
 <script src="/socket.io/socket.io.js"></script>

@@ -1,44 +1,37 @@
 const socket = io();
 
-document.querySelector("#formNewProduct")
-.addEventListener("submit", (e) => {
-  e.stopPropagation();
+document.querySelector("#formNewProduct").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
-  console.log("data", JSON.stringify(data));
-  // socket.emit("nuevoProducto", JSON.stringify(data))
   socket.emit("nuevoProducto", data);
+  e.target.reset();
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
+const contenedor = document.querySelector("#productContainer");
 socket.on("allProducts", (socketProducts) => {
-  console.log(socketProducts)
-  return socketProducts;
+  contenedor.innerHTML =''
+  socketProducts.forEach((e) => {
+    contenedor.innerHTML += `
+      <div>
+        <p><strong>ID: ${e.id} </strong> </p>
+        <p><strong>Name: ${e.title}</strong> </p>
+        <p><strong>Description: ${e.description}</strong> </p>
+        <p><strong>Code: ${e.code}</strong> </p>
+        <p><strong>Price: ${e.price}</strong></p>
+        <p><strong>Status: ${e.status}</strong></p>
+        <p><strong>Stock: ${e.stock}</strong></p>
+        <p><strong>Category: ${e.category}</strong></p>
+        <button onclick="deleteProductSocket('${e.id}')">Eliminar</button>
+      </div>
+      `;
+  });
 });
+
+/* ---------------------------------------------------- */
 
 const deleteProductSocket = (prodId) => {
-  console.log("eliminar", prodId);
-  socket.emit("deleteProduct", prodId);
+   console.log("eliminar", prodId);
+   socket.emit("deleteProduct", prodId);
 };
 
-// socket.on("allProducts", (socketProducts) => {
-//   socketProducts;
-// });
-
-socket.on("newProduct", (product) => {
-  const lista = document.getElementById("productos");
-  const nuevoItem = document.createElement("li");
-  nuevoItem.textContent = `Producto: ${product.title}, Precio: ${product.price}`;
-  lista.appendChild(nuevoItem);
-});

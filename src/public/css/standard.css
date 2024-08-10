@@ -47,7 +47,21 @@ figure {
   object-position: center center;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,a,strong,blockquote,i,b,u,em {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
   font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
@@ -97,7 +111,6 @@ label {
 html {
   scroll-behavior: smooth;
   background-color: darkgray;
-
 }
 body {
   min-height: 100vh;
@@ -121,11 +134,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1{
+h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-h2{font-size: 1.5rem;}
+h2 {
+  font-size: 1.5rem;
+}
 /* h3{} */
 /* h4{} */
 /* h5{} */
@@ -160,7 +175,7 @@ h2{font-size: 1.5rem;}
 /* s{} */
 /* samp{} */
 /* small{} */
-strong{
+strong {
   font-weight: bold;
 }
 /* sub{} */
@@ -172,29 +187,30 @@ strong{
 /* wbr{} */
 
 /* ------------------------------    Forms and Imput      ----------------------------- */
-form{
+form {
   display: flex;
   flex-direction: column;
 }
 
-form div{
+form div {
   display: inherit;
   flex-direction: column;
 }
 
-input[type=text], input[type=number]{
+input[type="text"],
+input[type="number"] {
   background-color: bisque;
   height: 2rem;
   padding-left: 0.5rem;
 }
 /* textarea{} */
-button, input[type=submit]{
+button,
+input[type="submit"] {
   padding: 0.5rem 1rem;
   font-weight: bold;
   background-color: silver;
   box-shadow: 1px 1px 1px black;
 }
-
 
 /* select{} */
 /* optgroup{} */
@@ -243,12 +259,20 @@ p a {
   display: inline;
 }
 /* link{} */
-nav{
+nav {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: aqua;
+  padding: 1rem 0 ;
+  background-color: teal;
+}
+
+nav a {
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px rgb(62, 62, 62);
+  background-color: rgb(121, 196, 199);
 }
 
 /* ------------------------------    List      ---------------------------------------- */
@@ -286,7 +310,7 @@ td {
 /* ------------------------------    Styles and Semantics      ------------------------ */
 /* div{} */
 /* span{} */
-header{
+header {
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -313,9 +337,9 @@ header{
 /* object{} */
 /* param{} */
 
-.container{
+.container {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -324,45 +348,56 @@ header{
   background-color: teal;
 }
 
-.container div{
-  width: 500px;
+.container div {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0.8rem;
-  border: 1px solid red;
   color: aliceblue;
+box-shadow: 1px 1px 1px black;
+  background-color: rgba(13, 85, 163, 0.747);
 }
 
-.twoColumns{
+.container div button {
+  width: 80%;
+  align-self: center;
+  position: absolute;
+  color: #393939;
+  bottom: 2rem;
+}
+
+.twoColumns {
   width: 100%;
   min-height: 90vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 20rem auto;
 }
 
-.form{
+.form {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
   padding: 1rem;
   gap: 2rem;
-  background-color: cornflowerblue;
+  background-color: teal;
 }
 
-.form p {
+.form h2 {
   justify-content: center;
   text-align: center;
   font-weight: bold;
 }
 
-.form div{
-  padding: 1rem;
+.form div {
+  padding: .8rem;
   background-color: rgb(128, 126, 126);
 }
 
-.buttonEnviar{
+.buttonEnviar {
   display: flex;
   justify-content: center;
   align-content: center;
